@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прогноз погоды</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1>Форма для ввода города</h1>
+    <form action="/get_forecast" method="post">
+        <label for="userInput">Введите название города:</label><br>
+        <input type="text" id="userInput" name="userInput"><br><br>
+        <input type="submit" value="Получить прогноз">
+    </form>
+    {% if forecast %}
+    <h2> Ваш прогноз:</h2>
+    <div>{{ forecast }}</div>
+    {% endif %}
+</body>
+</html>
